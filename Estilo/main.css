@@ -1,0 +1,210 @@
+@charset "UTF-8";
+body,
+html {
+    font-family: 'Karla', sans-serif;
+    background: hsl(204, 43%, 93%);
+    Font-size: 16px;
+}
+
+@media (max-width:425px){
+    .gridContainer{
+        
+        margin: 50px 40px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "header"
+                             "main  "
+                             "aside " ;
+    }
+    .header{
+        grid-area: header;
+        background: white; 
+        border-radius: 10px 10px 0 0;
+        padding: 10px 30px ;
+
+    }
+
+    .header h1{
+        font-size:20px; 
+        color: hsl(179, 62%, 43%);
+    }
+
+    .header h3 {
+        color: hsl(71, 73%, 54%);
+        font-size: 15px;
+    }
+
+    .header p {
+        font-size: 15px;
+        color: hsl(218, 22%, 67%);
+        line-height: 1.5;
+    }
+
+    .main{
+        grid-area: main;
+        background: hsl(179, 61%, 43%);
+        color:white;
+        padding: 10px 30px ;
+    }
+
+    .main span {
+        font-size: 50px;
+        color: white;
+        
+        
+    }
+    
+    .main span::after {
+        content: " ";
+    }
+    
+    .main p:nth-child(2) {
+        color: hsl(223, 4%, 31%);
+    }
+    
+    .main h1 {
+        font-size: 20px;
+    }
+    
+    .main p:nth-child(3){
+        margin-top: -10px;
+        font-size: 15px;
+        
+    }
+    .main .button{
+        background:hsl(71, 73%, 54%);
+        border-radius:5px;
+        padding: 10px;
+        display: block;
+        text-align: center;
+        color:white;
+        text-decoration: none;
+        font-size: 20px;
+        margin-top: 30px;
+        
+    }
+    .button:hover{
+        background:hsl(71, 74%, 43%);
+    }
+
+    
+
+    .aside {
+        background: hsl(179, 47%, 51%);
+        padding: 10px 30px ;
+        grid-area: aside;
+        border-radius: 0 0 10px 10px;
+        color:white;
+        
+    }
+    .aside h1{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .aside p{
+        line-height: 0.9;
+      
+    }
+}
+
+@media (min-width: 768px) {
+
+.gridContainer {
+    width: 60%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "header header"
+                         "main   aside "
+                         ; 
+}
+
+.header {
+    grid-area: header;
+    background: white;
+    padding: 30px 50px ;
+    border-radius: 10px 10px 0 0;
+    
+}
+
+.header h1 {
+    color: hsl(179, 62%, 43%);
+}
+
+.header h3 {
+    color: hsl(71, 73%, 54%)
+}
+
+.header p {
+    font-size: 22px;
+    color: hsl(218, 22%, 67%)
+}
+
+.main {
+    background: hsl(179, 61%, 43%);
+    padding: 30px 50px ;
+    color: white;
+    border-radius: 0 0 0 10px;
+    grid-area: main;
+   
+   
+}
+
+.main span {
+    font-size: 50px;
+    color: white;
+    
+    
+}
+
+.main span::after {
+    content: " ";
+}
+
+.main p:nth-child(2) {
+    color: hsl(223, 4%, 31%);
+}
+
+.main h1 {
+    font-size: 24px;
+}
+
+.main p:nth-child(3){
+    margin-top: -10px;
+   
+    font-size: 20px;
+    
+}
+.main .button{
+    background:hsl(71, 73%, 54%);
+    border-radius:5px;
+    padding: 20px;
+    display: block;
+    text-align: center;
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 30px;
+    
+}
+.button:hover{
+    background:hsl(71, 74%, 43%);
+}
+.aside {
+    background: hsl(179, 47%, 51%);
+    padding: 30px 50px ;
+    grid-area: aside;
+    border-radius: 0 0 10px 0;
+    color:white;
+    
+}
+.aside h1{
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.aside p{
+    line-height: 0.9;
+  
+}
+}
+
